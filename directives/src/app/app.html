@@ -1,5 +1,19 @@
+<div *ngIf="isLoggedIn; else notLoggedIn">✅ Welcome back, user!</div>
 
-<button (click)="loginToggle()"  *ngIf="login;else elseBlock " >Logout</button>
-<ng-template #elseBlock>
-    <button (click)="loginToggle()">Login</button>
-</ng-template>
+<!-- Using ng-template for else -->
+<ng-template #notLoggedIn> ❌ Please log in. </ng-template>
+
+<!-- app.component.html -->
+@if (isLoggedIn) { ✅ Welcome back, user! } @else { ❌ Please log in. }
+
+<!-- app.component.html -->
+<ul>
+  <li *ngFor="let item of items; index as i">{{ i + 1 }}. {{ item }}</li>
+</ul>
+
+<!-- app.component.html -->
+<ul>
+  @for (item of items; track $index) {
+  <li>{{ $index + 1 }}. {{ item }}</li>
+  }
+</ul>

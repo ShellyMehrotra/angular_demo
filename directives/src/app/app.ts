@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NgIf } from '@angular/common';
+import { NgIf,NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [NgIf],
+  imports: [NgIf, NgForOf],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  login=true
+isLoggedIn = false;
+showTemplate = false;
 
-loginToggle(){
-   this.login=!this.login
-}
+items = ['Angular', 'React', 'Vue'];
+
+role = 'user'; // try 'admin', 'guest'
 }
