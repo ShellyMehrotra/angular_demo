@@ -1,0 +1,26 @@
+<h2>✨ Attribute Directives Demo</h2>
+
+<!-- ngClass Example -->
+<p [ngClass]="{'special': isSpecial, 'error': hasError}">
+This text style changes with ngClass
+</p>
+<button (click)="toggleClass()">Toggle Classes</button>
+
+<hr>
+
+<!-- ngStyle Example -->
+<p [ngStyle]="{'font-size': fontSize, 'color': textColor}">
+This text uses dynamic ngStyle
+</p>
+<button (click)="increaseFont()">Increase Font Size</button>
+
+<hr>
+
+<!-- ngModel Example -->
+<label>Enter your name: </label>
+<input [(ngModel)]="userName" placeholder="Type your name">
+<p>Hello, {{ userName || 'Guest' }}!</p>
+
+<label>Enter your age: </label>
+<input type="number" [(ngModel)]="age">
+<p>Your age is {{ age }}</p>

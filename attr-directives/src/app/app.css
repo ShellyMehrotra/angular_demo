@@ -1,0 +1,9 @@
+.special {
+font-weight: bold;
+color: green;
+}
+
+.error {
+color: red;
+text-decoration: underline;
+}
