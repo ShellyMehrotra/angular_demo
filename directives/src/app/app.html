@@ -1,0 +1,5 @@
+
+<button (click)="loginToggle()"  *ngIf="login;else elseBlock " >Logout</button>
+<ng-template #elseBlock>
+    <button (click)="loginToggle()">Login</button>
+</ng-template>
